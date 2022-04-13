@@ -1,11 +1,13 @@
-import React from "react";
-import { Button, Stack } from "@chakra-ui/react";
-import { useAccountChange, useNetworkChange } from "../../hooks";
-import { fetchAccountDetails } from "../../Web3/web3";
+import React from 'react'
+import { Button, Stack } from '@chakra-ui/react'
+import { useAccountChange, useNetworkChange } from '../../hooks'
+import { fetchAccountDetails } from '../../Web3/web3'
 
-const Navbar = () => {
-  const account = useAccountChange();
-  const network = useNetworkChange();
+function Navbar() {
+  const account = useAccountChange()
+  const network = useNetworkChange()
+
+  console.log(account)
 
   return (
     <Stack direction="row" spacing={4} align="center" p={4}>
@@ -26,7 +28,7 @@ const Navbar = () => {
         </Stack>
       )}
     </Stack>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar
